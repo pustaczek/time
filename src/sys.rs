@@ -99,7 +99,8 @@ mod inner {
     }
 
     pub fn get_time() -> (i64, i32) {
-        unimplemented!()
+        let ms = js_sys::Date::now();
+        ((ms as i64) / 1000, ((ms as i64) % 1000 * 1000000) as i32)
     }
 
     pub fn get_precise_ns() -> u64 {
