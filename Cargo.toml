@@ -1,26 +1,20 @@
 [package]
-
 name = "time"
-version = "0.1.42"
+version = "0.1.43"
 authors = ["The Rust Project Developers"]
 license = "MIT/Apache-2.0"
-homepage = "https://github.com/rust-lang/time"
-repository = "https://github.com/rust-lang/time"
-documentation = "https://doc.rust-lang.org/time"
+homepage = "https://github.com/time-rs/time"
+repository = "https://github.com/time-rs/time"
+documentation = "https://docs.rs/time/~0.1"
 description = """
 Utilities for working with time-related functions in Rust.
 """
-
-[badges]
-travis-ci = { repository = "rust-lang-deprecated/time" }
-appveyor = { repository = "alexcrichton/time" }
+readme = "README.md"
+exclude = [".github", "benches"]
 
 [dependencies]
-libc = "0.2.1"
+libc = "0.2.69"
 rustc-serialize = { version = "0.3", optional = true }
-
-[target.'cfg(target_os = "redox")'.dependencies]
-redox_syscall = "0.1"
 
 [target.'cfg(windows)'.dependencies]
 winapi = { version = "0.3.0", features = ["std", "minwinbase", "minwindef", "ntdef", "profileapi", "sysinfoapi", "timezoneapi"] }
